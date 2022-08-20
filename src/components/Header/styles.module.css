@@ -42,6 +42,21 @@ ul {
   gap: 3rem;
 }
 
+ul li {
+  position: relative;
+}
+
+ul li.active::after {
+  content: "";
+  width: 100%;
+  height: 2.5px;
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+  background: #fff;
+  transition: .15s ease;
+}
+
 ul li a {
   font-family: "Poppins", sans-serif;
   color: #fff;
