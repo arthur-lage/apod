@@ -9,7 +9,6 @@ type Props = {
 export function PictureComponent({ data }: Props) {
   return (
     <section className={styles.todaysPicture}>
-      <h1 className={styles.title}>Today's Picture</h1>
       <div className={styles.picture}>
         <img className={styles.pictureImage} src={data.url} alt={data.title} />
         <div className={styles.pictureInfo}>

@@ -1,3 +1,4 @@
+import { Planet } from "phosphor-react";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 
@@ -8,17 +9,22 @@ type Props = {
 export function Header({ pageIndex }: Props) {
   return (
     <header className={styles.header}>
-      <Link className={styles.logo} to="/">APOD</Link>
+      <Link className={styles.logo} to="/">
+        APOD
+      </Link>
 
       <nav>
         <ul>
-          <li className={`${pageIndex == 0 ? "active" : ""}`}>
+          <li>
+            {pageIndex == 0 && <Planet color="#fff" size={32} />}
             <Link to="/">Today's Picture</Link>
           </li>
-          <li className={`${pageIndex == 1 ? "active" : ""}`}>
+          <li>
+            {pageIndex == 1 && <Planet color="#fff" size={32} />}
             <Link to="/custom-date">Custom Date</Link>
           </li>
-          <li className={`${pageIndex == 2 ? "active" : ""}`}>
+          <li>
+            {pageIndex == 2 && <Planet color="#fff" size={32} />}
             <Link to="/about">About</Link>
           </li>
         </ul>

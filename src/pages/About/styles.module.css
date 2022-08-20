@@ -1,0 +1,32 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 7.5rem;
+  font-family: "Poppins", sans-serif;
+  gap: 2rem;
+}
+
+.title {
+  font-size: 4.2rem;
+  letter-spacing: .08rem;
+  color: #222;
+}
+
+p, small {
+  font-size: 1.8rem;
+}
+
+.madeBy {
+  font-size: 2rem;
+  color: #222;
+}
+
+.link {
+  color: #593C8F;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
