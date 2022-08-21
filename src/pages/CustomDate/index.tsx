@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import axios from "axios";
 
@@ -42,6 +42,20 @@ export function CustomDate() {
     }
   }
 
+  function getCurrentDate() {
+    return new Date().toISOString().split("T")[0];
+  }
+
+  useEffect(() => {
+    setCustomDateInput(getCurrentDate());
+    const inputDate = document.querySelector("#date");
+
+    if (inputDate) {
+      //@ts-ignore
+      inputDate.max = getCurrentDate();
+    }
+  }, []);
+
   return (
     <div>
       <Header pageIndex={1} />
@@ -52,6 +66,7 @@ export function CustomDate() {
           <input
             type={"date"}
             id={"date"}
+            min="1995-06-16"
             value={customDateInput}
             onChange={(e) => setCustomDateInput(e.target.value)}
           />
