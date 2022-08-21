@@ -12,7 +12,7 @@ export function PictureComponent({ data }: Props) {
       <div className={styles.picture}>
         <img className={styles.pictureImage} src={data.url} alt={data.title} />
         <div className={styles.pictureInfo}>
-          <span className={styles.pictureBy}>Picture by {data.copyright}</span>
+          <span className={styles.pictureBy}>Picture by: {data.copyright ? data.copyright : "Unknown"}</span>
           <span className={styles.pictureDate}> Date: {data.date} </span>
           <span className={styles.pictureName}>Name: {data.title}</span>
           <span className={styles.pictureDescription}>

@@ -1,11 +1,12 @@
 .header {
   display: flex;
   align-items: center;
+  position: relative;
   padding: 3rem;
   gap: 2rem;
   width: 100%;
   height: 8rem;
-  background: linear-gradient(to right, #171738, #593C8F);
+  background: linear-gradient(to right, #171738, #593c8f);
 }
 
 .logo {
@@ -15,7 +16,7 @@
   font-family: "Poppins", sans-serif;
   color: #fff;
   font-weight: 700;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
   position: relative;
 }
 
@@ -27,13 +28,17 @@
   left: 0;
   bottom: -0.5rem;
   background: #fff;
-  transition: .15s ease;
+  transition: 0.15s ease;
   transform: scaleX(0);
 }
 
 .logo:hover::after {
   transform: scaleX(1);
   transform-origin: center;
+}
+
+.desktopMenu {
+  display: flex;
 }
 
 ul {
@@ -53,14 +58,14 @@ ul li a {
   font-family: "Poppins", sans-serif;
   color: #fff;
   font-weight: 500;
-  letter-spacing: .08rem;
+  letter-spacing: 0.08rem;
   font-size: 1.8rem;
   text-decoration: none;
   display: flex;
   position: relative;
 }
 
-ul li a::after {
+.desktopMenu ul li a::after {
   content: "";
   width: 100%;
   height: 2.5px;
@@ -69,10 +74,60 @@ ul li a::after {
   transform: scaleX(0);
   bottom: -1rem;
   background: #fff;
-  transition: .15s ease;
+  transition: 0.15s ease;
 }
 
-ul li a:hover::after {
+.desktopMenu ul li a:hover::after {
   transform: scaleX(1);
   transform-origin: center;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .desktopMenu {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: flex;
+    animation: 0.1s fade forwards ease;
+  }
+
+  .mobileMenu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: linear-gradient(to right, #171738, #593c8f);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    gap: 4rem;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .mobileMenu ul li a {
+    font-size: 2rem;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
