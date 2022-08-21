@@ -7,11 +7,13 @@ In this app, you can see the Astronomy Picture Of the Day, which is available fr
 
 ## 🌆 Images
 
-<img src="./assets/Screenshot_1.png" width="150" />
-<img src="./assets/Screenshot_2.png" width="150" />
-<img src="./assets/Screenshot_3.png" width="150" />
-<img src="./assets/Screenshot_4.png" width="150" />
-<img src="./assets/Screenshot_5.png" width="150" />
+<div>
+  <img src="./assets/Screenshot_1.png" />
+  <img src="./assets/Screenshot_2.png" />
+  <img src="./assets/Screenshot_3.png" />
+  <img src="./assets/Screenshot_4.png" width="250" />
+  <img src="./assets/Screenshot_5.png" width="250" />
+</div>
 
 ## Docs
 
